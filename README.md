@@ -14,3 +14,4 @@ The project will have a platform that will be dedicated to the artists across va
 -Artist Profiles: You can also access profiles of the artists and get to know more about them.
 
 Author: Parul Chauhan from squad 59
+## Hope you like it
