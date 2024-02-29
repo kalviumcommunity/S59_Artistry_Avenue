@@ -1,9 +1,22 @@
 const express = require('express')
-const App = express()
-const port = 8080;
+let app = express();
+const {connectDB, checkConnected}=require('./db.js')
 
-App.get('/ping', (req, res) => {
-    res.send('<h1>Pong</h1>')
-}) 
+connectDB()
 
-App.listen(port, () => console.log('App is starting', port))
+app.get("/",(req,res)=>{
+    if(checkConnected()){
+        res.send("Data base connection successful!!")
+    }
+    else{
+        res.send("Connection Failed")
+    }
+});
+
+let port = 8080;
+
+app.listen(port,()=>{
+    console.log(`we are at port ${port}`)
+})
+
+module.exports= {app}
