@@ -1,0 +1,22 @@
+meta {
+  name: Requests
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8001/apI/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name_of_the_artist": "Kidree",
+    "art_category": "Music",
+    "age": 18,
+    "net_worth": "N/A",
+    "famous_art": "Umar 18",
+    "country": "India"
+  }
+}
