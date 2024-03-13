@@ -4,10 +4,11 @@ const {connectDB, checkConnected}=require('./db.js')
 const port = 8001;
 const mongoose = require('mongoose')
 const routes = require('./routes.js')
+const cors = require('cors')
 
 app.use(express.json());
 connectDB()
-
+app.use(cors())
 app.get('/ping', (req , res)=>{
     res.send("pong")
 })
