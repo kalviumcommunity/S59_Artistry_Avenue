@@ -24,9 +24,13 @@ const data = new mongoose.Schema({
     country : {
         type: String,
         required: true
+    },
+    artSrc : {
+        type: String,
+        required: true
     }
 })
 
-const dataSet = mongoose.model('dataSet', data);
+const artist = mongoose.model('artist', data);
 
-module.exports = dataSet
+module.exports = artist
