@@ -13,5 +13,9 @@ The project will have a platform that will be dedicated to the artists across va
 -Type of art: The user can choose to see the best, silly, or worst art in a particular category.
 -Artist Profiles: You can also access profiles of the artists and get to know more about them.
 
+### Enjoy the website here:
+https://fd5d028a.artistryavenueasap.pages.dev/
+---
+
 Author: Parul Chauhan from squad 59
 ## Hope you like it
