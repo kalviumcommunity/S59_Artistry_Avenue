@@ -10,7 +10,7 @@ function Navbar() {
         <div className="navbar_container">
           <div id="navbar_left">
             <a href="/">
-              <img src='/public/Navbar-logo.png' alt="Logo_img" className="navbar_image" />
+              <img src='../../Navbar-logo.png' alt="Logo_img" className="navbar_image" />
             </a>
             <div className="navbar_title">
               <Link to="/" className="navbar_logo">
