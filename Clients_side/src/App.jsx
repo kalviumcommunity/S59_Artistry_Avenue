@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Navbar from './Components/Navbar'
+import Artists from './Components/Artists'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
         <Navbar />
+        <Artists />
       </div>
     </>
   )

@@ -16,7 +16,7 @@ function Navbar() {
               <Link to="/" className="navbar_logo">
                 <h1>Artistry <br /> &nbsp; Avenue</h1>
               </Link>
-              <p className="navbar_desc">Hey he reflwkjgnj e dmf vkl k ldjv kejv lkel vn ejvb sjkb s rbn ern vns erkn fefn lnbl sebnbi</p>
+              <p className="navbar_desc"> <span className="desc_one"> Dive into a platform dedicated to the artists across various mediums. Hover over singers, architects, painters, and others.</span> <br /> <br /> <span className="desc_two">Showcasing you the best, silly, and worst art of the artists.</span> </p>
             </div>
           </div>
 
