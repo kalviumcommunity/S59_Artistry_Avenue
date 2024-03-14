@@ -8,6 +8,7 @@ const Artists = () => {
         fetch("https://s59-artistry-avenue-4.onrender.com/api")
             .then(response => response.json())
             .then(result => setData(result))
+            .catch((err) => console.log(err))
     }
 
     useEffect(() => {
