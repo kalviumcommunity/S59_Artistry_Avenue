@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    color: blue;
+    font-weight: 800;
+    padding: 2vw;
+    font-size: 2vw;
+}
+
+.playground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(217, 245, 252);
+}
+
+.form-container {
+    border: 3.5px solid white;
+    border-radius: 15px;
+    background-color: rgb(120, 203, 255);
+    padding: 2vw 2vw;
+    margin: 2vh 0 8vh 0;
+    width: 35%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.8vw;
+    padding: 1vw 2vw;
+}
+
+.form_el {
+    padding: .8vw;
+    width: 100%;
+    font-size: 1.15vw;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: rgb(254, 254, 254);
+    color: black;
+    cursor: pointer;
+}
+
+.addArtist_btn {
+    background-color: rgb(245, 76, 76);
+    color: white;
+    width: 100%;
+    border: none;
+    height: 7vh;
+    font-size: 1.3vw;
+}
