@@ -15,7 +15,7 @@ router.get('/',async (req , res) => {
     }
 })
 
-router.get('/userArtists',async (req , res) => {
+router.get('/user-artists',async (req , res) => {
     try{
         const Artists = await userData.find()
         res.json(Artists)

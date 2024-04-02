@@ -15,7 +15,7 @@ const Artists = () => {
     }
 
     const fetchUserData = () => {
-        fetch("http://localhost:8001/api/userArtists")
+        fetch("http://localhost:8001/api/user-artists")
             .then(response => response.json())
             .then(result => {
                 setUserData(result)
