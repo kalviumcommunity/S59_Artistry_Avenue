@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import '../App.css'
 
 async function handleUpdate(id, data, fetchData) {
-    console.log(data)
     try {
         const response = await fetch(`http://localhost:8001/api/custom-artist/${id}`, {
             method: 'PATCH',

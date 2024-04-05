@@ -15,7 +15,6 @@ function DeleteBtn({ id, fetchData }) {
             if (response.ok) {
                 console.log("Deleted")
                 fetchData();
-
             }
 
         } catch (err) {
