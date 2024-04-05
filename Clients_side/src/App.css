@@ -71,6 +71,12 @@
   font-family: "Caveat", cursive;
 }
 
+.explore_img {
+  width: 15vw;
+  height: 15vw;
+  padding: 0;
+}
+
 .navbar_menu {
   list-style: none;
   display: flex;
@@ -127,24 +133,13 @@
 }
 
 .main_container:hover {
-  transform: scale(1.05); 
+  /* transform: scale(1);  */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* .main_container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0); 
-  border-radius: 5px;
-} */
-
 .main_container:hover {
   background: rgba(0, 0, 0, 0.1);
-}
+} 
 
 .container_one {
   display: flex;
@@ -191,6 +186,148 @@
   font-size: .9vw;
 }
 
+#home_page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar_right {
+  margin: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#navbar_right:hover {
+  transform: scale(1.05);
+}
+
+.explore_btn {
+  padding: .9vw;
+  font-size: 1.5vw;
+  font-weight: 800;
+  font-family: "Caveat";
+  word-spacing: .2vw;
+  background-color: #f7374d;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.explore_btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);  
+}
+
+.explore_Desc {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 5vw;
+  font-size: 2.7vw;
+  color: #f7374d;
+  text-decoration: underline;
+} 
+
+/* .popup{
+  position: fixed;
+  top: 3vw;
+  left: 30vw;
+  padding: 3vw;
+  background-color: red;
+  z-index: 5;
+} */
+
+.update_btn {
+  font-size: 1.2vw;
+  border-radius: 5px;
+  border: none;
+  background-color: #f7374d;
+  color: white;
+  padding: .5vw;
+  margin: .5vw 1.5vw;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.delete_btn {
+  font-size: 1.2vw;
+  border-radius: 5px;
+  border: none;
+  background-color: #f7374d;
+  color: white;
+  padding: .5vw;
+  margin: .5vw 1.5vw;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+}
+
+.update_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.editform {
+  display: flex;
+  font-weight: 600;
+  flex-direction: column;
+  position: fixed;
+  top: 15vh;
+  left: 36vw;
+  width: 30vw;
+  background-color: rgb(174, 180, 179);
+  padding: 2vw;
+  color: black;
+  border-radius: 7px;
+  font-family: "Ubuntu";
+  gap: .4vw;
+}
+
+form.editform input[type="text"],
+form.editform textarea {
+  padding: .5vw;
+  margin: .5vw;
+  border: none;
+  width: 400px;
+  border-radius: 3px;
+  box-sizing: border-box; 
+}
+
+form.editform button {
+  padding: 10px 15px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  color: #f7374d;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1vw;
+  transition: background-color 0.3s ease; 
+}
+
+form.editform button[type="button"] {
+  background-color: #ffffff; 
+}
+
+form.editform button[type="button"]:hover {
+  background-color: #f7374d; 
+  color: white;
+}
+
+form.editform label button {
+  margin: 1vw;  
+}
+ 
 
 @keyframes fadeIn {
   0% {

@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const {connectDB} = require('./db.js')
 const Artist = require('./Schemas/schema.js')
-const userData = require('./Schemas/productSchema.js')
+const userData = require('./Schemas/ProductSchema.js')
 
 
 //for artist model
@@ -15,7 +15,7 @@ router.get('/',async (req , res) => {
     }
 })
 
-router.get('/userArtists',async (req , res) => {
+router.get('/user-artists',async (req , res) => {
     try{
         const Artists = await userData.find()
         res.json(Artists)
