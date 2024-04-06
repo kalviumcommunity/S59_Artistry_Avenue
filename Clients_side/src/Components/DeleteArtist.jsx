@@ -5,7 +5,7 @@ function DeleteBtn({ id, fetchData }) {
 
     const handleClick = async () => {
         try {
-            const response = await fetch(`http://localhost:8001/api/custom-artist/${id}`, {
+            const response = await fetch(`https://s59-artistry-avenue-4.onrender.com//api/custom-artist/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

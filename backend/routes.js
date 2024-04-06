@@ -3,6 +3,27 @@ const router = express.Router();
 const {connectDB} = require('./db.js')
 const Artist = require('./Schemas/schema.js')
 const userData = require('./Schemas/ProductSchema.js')
+const Joi = require('joi');
+
+const userDataSchema = Joi.object({
+    name_of_the_artist: Joi.string().required(),
+    art_category: Joi.string().required(),
+    age: Joi.number(),
+    net_worth: Joi.string(),
+    famous_art: Joi.string(),
+    country: Joi.string().required(),
+    artSrc: Joi.string().required()
+})
+
+const checkValidation = (input, schema) => {
+    const { error } = schema.validate(input)
+    if (error) {
+        return false
+    }
+    else {
+        return true
+    }
+}
 
 
 //for artist model
@@ -104,6 +125,12 @@ router.get('/custom-artist/:id' , async (req, res)=>{
 })
 
 router.post('/custom-artist-add', async (req , res)=>{
+
+    const isValid = checkValidation(req.body, userDataSchema);
+    if (!isValid) {
+        return res.status(400).json({ error: 'Invalid input data' });
+    }
+
     const newUserData = new userData(req.body)
     try{
         const saveUserData = await newUserData.save()
