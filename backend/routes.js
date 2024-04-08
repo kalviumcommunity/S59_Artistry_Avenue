@@ -125,7 +125,6 @@ router.get('/custom-artist/:id' , async (req, res)=>{
 })
 
 router.post('/custom-artist-add', async (req , res)=>{
-
     const isValid = checkValidation(req.body, userDataSchema);
     if (!isValid) {
         return res.status(400).json({ error: 'Invalid input data' });
