@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Navbar from './Navbar';
 import './AddArtist.css'
 
 function AddArtist() {
@@ -69,6 +70,7 @@ function AddArtist() {
 
   return (
     <div>
+      <Navbar />
       <div className='playground'>
         <h2 className='title'>Add your own Artist below:</h2>
         <div className='form-container'>

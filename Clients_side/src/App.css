@@ -6,10 +6,6 @@
   box-sizing: border-box; 
 }
 
-/* .nav_Section {
-  z-index: 2;
-} */
-
 .navbar {
   background-color: #f7374d;
   height: 12vh;
@@ -80,9 +76,10 @@
 .navbar_menu {
   list-style: none;
   display: flex;
-  padding: 2vw 1vw;
   justify-content: space-between;
   width: 60%;
+  align-items: center;
+  padding: 2vw 1vw;
 }
 
 .list_one {
@@ -99,6 +96,21 @@
 
 .navbar_pages:hover {
   opacity: .7;
+}
+
+.log_btn {
+  font-size: 1.09vw;
+  background-color: whitesmoke;
+  color: #f7374d;
+  font-weight: 700;
+  padding: .5vw 1.2vw;
+  border: none;
+  border-radius: 5px;
+}
+
+.log_btn:hover {
+  background-color: #fdd5d5;
+  color: #f7374d;
 }
 
 .add_btn{
@@ -133,7 +145,6 @@
 }
 
 .main_container:hover {
-  /* transform: scale(1);  */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -232,15 +243,6 @@
   color: #f7374d;
   text-decoration: underline;
 } 
-
-/* .popup{
-  position: fixed;
-  top: 3vw;
-  left: 30vw;
-  padding: 3vw;
-  background-color: red;
-  z-index: 5;
-} */
 
 .update_btn {
   font-size: 1.2vw;

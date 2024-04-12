@@ -3,6 +3,7 @@ const router = express.Router();
 const {connectDB} = require('./db.js')
 const Artist = require('./Schemas/schema.js')
 const userData = require('./Schemas/ProductSchema.js')
+const user = require('./Schemas/UserSchema.js')
 const Joi = require('joi');
 
 const userDataSchema = Joi.object({
@@ -164,7 +165,40 @@ router.delete('/custom-artist/:id' , async (req , res)=>{
     }
 })
 
+// for user signup
+router.post('/sign-user', async (req, res) => {
+    const { email, username, password } = req.body;
 
+    const existingArtist = await user.findOne({ $or: [{ email }, { username }] });
+    if (existingArtist) {
+        return res.status(400).json({ error: 'Username or email already exists' });
+    }
+
+    const newArtist = new user(req.body);
+    try {
+        const savedArtist = await newArtist.save();
+        res.json(savedArtist);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// for user login
+router.post('/login-user', async (req, res) => {
+    const { username, email, password } = req.body;
+
+    const existingUser = await user.findOne({ $or: [{ email }, { username }] });
+    if (!existingUser) {
+        return res.status(400).json({ error: 'Invalid username or email' });
+    }
+
+    const isPasswordValid = password == existingUser.password;
+    if (!isPasswordValid) {
+        return res.status(400).json({ error: 'Invalid password' });
+    }
+
+    res.json({ message: 'Login successful', user: existingUser , username: username });
+});
 
 connectDB()
 

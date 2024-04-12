@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 import Artists from './Artists';
 
-function Home() {
+function Home({ isLoggedIn, setIsLoggedIn }) {
     const exploreArtistsRef = useRef(null);
     const [scrollToArtists, setScrollToArtists] = useState(false);
 
@@ -15,6 +16,7 @@ function Home() {
 
     return (
         <>
+        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <div id='home_page'>
                 <div id="navbar_left">
                     <Link to="/">

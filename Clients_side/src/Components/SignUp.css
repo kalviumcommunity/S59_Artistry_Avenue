@@ -1,0 +1,36 @@
+.main-container {
+    margin: 3vw auto;
+    width: 40%;
+    padding: 2vw 1vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.signup {
+    font-size: 1.8vw;
+}
+
+.input {
+    padding: .6vw;
+    margin: 0vw;
+}
+
+.label {
+    font-size: 1vw;
+    font-family: Poppins, san-serif;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    padding: .5vw;
+    font-size: 1.2vw;
+}
+
+
+
