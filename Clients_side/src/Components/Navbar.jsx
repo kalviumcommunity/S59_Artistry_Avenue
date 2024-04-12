@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar({ isLoggedIn, setIsLoggedIn }) {
   const handleLogout = () => {
+    document.cookie = 'token=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;';
     document.cookie = `username=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
     console.log("Logout successful");
     setIsLoggedIn(false);

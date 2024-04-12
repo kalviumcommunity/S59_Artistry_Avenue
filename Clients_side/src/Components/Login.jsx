@@ -48,6 +48,7 @@ const Login = ({ setIsLoggedIn }) => {
     try {
       const responseData = await signInUser(); 
       document.cookie = `username=${responseData.user.username}; path=/;`; 
+      document.cookie = `token=${responseData.token}; path=/;`; ; 
       setverified(true)
       console.log('Login successful');
       
