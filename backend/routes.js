@@ -5,6 +5,9 @@ const Artist = require('./Schemas/schema.js')
 const userData = require('./Schemas/ProductSchema.js')
 const user = require('./Schemas/UserSchema.js')
 const Joi = require('joi');
+const jwt = require('jsonwebtoken')
+const SECRET = process.env.SECRET
+require('dotenv').config()
 
 const userDataSchema = Joi.object({
     name_of_the_artist: Joi.string().required(),
@@ -197,7 +200,9 @@ router.post('/login-user', async (req, res) => {
         return res.status(400).json({ error: 'Invalid password' });
     }
 
-    res.json({ message: 'Login successful', user: existingUser , username: username });
+    const token = jwt.sign({ userId: existingUser._id }, SECRET, { expiresIn: '5h' });
+    console.log(token)
+    res.json({ message: 'Login successful', user: existingUser , username: username , token: token});
 });
 
 connectDB()

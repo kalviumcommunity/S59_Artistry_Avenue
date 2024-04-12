@@ -6,7 +6,6 @@ import Artists from './Components/Artists';
 import AddArtist from './Components/AddArtist';
 import SignUp from './Components/Signup';
 import Login from './Components/Login';
-import Logout from './Components/Logout';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/login-user" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="/logout-user" element={<Logout setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/navbar" element={<Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/addArtist" element={<AddArtist />} />
