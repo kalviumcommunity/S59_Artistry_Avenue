@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar';
 import './AddArtist.css'
 
@@ -13,6 +13,13 @@ function AddArtist() {
   const [artSrc, setartSrc] = useState("");
 
   const [data, setData] = useState(null);
+
+  const [userName, setUserName] = useState(null)
+
+  useEffect(() => {
+    setUserName(getCookie("username"))
+    console.log(getCookie("username"))
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,8 +50,16 @@ function AddArtist() {
     }
   };
 
+  const getCookie = (cookieName) => {
+    const cookies = document.cookie
+    const cookieValue = cookies
+      .split("; ")
+      .find(row => row.startsWith(cookieName + '='))
+    return cookieValue ? cookieValue.split('=')[1] : null
+  }
+
   const handleSubmit = async (e) => {
-    const postData = { name_of_the_artist: artistName, art_category: artCategory, age: age, net_worth: netWorth, famous_art: famousArt, country: country, artSrc: artSrc }
+    const postData = { name_of_the_artist: artistName, art_category: artCategory, age: age, net_worth: netWorth, famous_art: famousArt, country: country, artSrc: artSrc, createdBy : userName }
     e.preventDefault();
     try {
       const response = await fetch("http://localhost:8001/api/new-item", {

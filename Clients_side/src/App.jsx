@@ -4,7 +4,7 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import Artists from './Components/Artists';
 import AddArtist from './Components/AddArtist';
-import SignUp from './Components/Signup';
+import SignUp from './Components/SignUp';
 import Login from './Components/Login';
 import { Routes, Route } from 'react-router-dom';
 
