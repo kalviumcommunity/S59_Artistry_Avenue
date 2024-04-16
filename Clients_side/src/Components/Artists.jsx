@@ -47,7 +47,6 @@ const Artists = ({ scrollToArtists }) => {
         fetch("http://localhost:8001/api/users")
             .then(response => response.json())
             .then(result => {
-                console.log("HEy")
                 console.log(result)
                 setUsernames(result);
             })
@@ -92,7 +91,7 @@ const Artists = ({ scrollToArtists }) => {
             <select onChange={(e) => setFilter(e.target.value)}>
                 <option>All</option>
                 {userNames && userNames.map(ele => (
-                    <option>{ele}</option>
+                    <option key={ele}>{ele}</option>
                 ))
                 }
             </select>
