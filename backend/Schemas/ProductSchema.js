@@ -28,6 +28,9 @@ const userDataSchema = new mongoose.Schema({
     artSrc : {
         type: String,
         required: true
+    },
+    createdBy :  {
+        type: String
     }
 })
 
